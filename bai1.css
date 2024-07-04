@@ -1,0 +1,13 @@
+.main-container {
+    width: 500px;
+    box-shadow: 0 0 5px pink;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+
+    h2 {
+        background-color: pink;
+
+    }
+}

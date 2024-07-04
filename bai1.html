@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>CẠNH HUYỀN</h1>
+        <input type="number" id="a" placeholder="Nhập vào a">
+        <input type="number" id="b" placeholder="Nhập vào b">
+        <button onclick="tinh()">TÍNH</button>
+        <h2>Cạnh huyền: <span id="result"></span></h2>
+    </div>
+
+    <script>   
+        function tinh(){
+            let a = document.getElementById("a").value;
+            a = Number(a);
+            let b = document.getElementById("b").value;
+            b = Number(b);
+            let c = Math.sqrt(a+a+b*b);
+            let d = c.toFixed(2);
+            document.getElementById("result").innerHTML=d;
+        }
+    </script>
+</body>
+</html>

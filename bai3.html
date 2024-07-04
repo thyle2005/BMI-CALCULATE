@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>TÍNH CHỈ SỐ BMI</h1>
+        <input type="text" id="a" placeholder="Nhập vào số kg">kg
+        <input type="text" id="b" placeholder="Nhập vào chiều cao">m
+        <button onclick="tinh()">TÍNH</button>
+        <h2>Số BMI: <span id="result"></span></h2>
+    </div>
+
+    <script>
+        function tinh() {
+            let a = document.getElementById("a").value;
+            a = parseFloat(a);
+
+            let b = document.getElementById("b").value;
+            b = parseFloat(b);
+
+            let bmi = a / (b * b);
+
+            let message = "";
+            if (bmi < 18.5) {
+                //alert
+                message = "Bạn ốm quá đi";
+            }
+            else if (bmi >= 18.5 && bmi < 25) {
+                //alert
+                message = "Bạn quá đẹp";
+            }
+            else if (bmi >= 25 && bmi < 30) {
+                //alert
+                message = "Bạn hơi béo rùi đó";
+            }
+            else {
+                //alert
+                message = "Bạn bị BÉO PHÌ";
+            }
+            alert(message);
+            document.getElementById("result").innerHTML = bmi.toFixed(2) + " (" + message + ")";
+        }
+    </script>
+</body>
+
+</html>

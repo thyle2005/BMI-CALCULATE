@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>ĐỔI ĐƠN VỊ ĐẤT ĐAI</h1>
+        <input type="text" id="a" placeholder="Nhập vào số m2 cần đổi">m<sup>2</sup>
+        <button onclick="doi()">ĐỔI</button>
+        <h2>Số sào: <span id="result1"></span> Sào</h2>
+        <h2>Số hecta: <span id="result2"></span> Hecta</h2>
+    </div>
+
+    <script>
+        function doi(){
+            let a = document.getElementById("a").value;
+            a = parseFloat(a);
+            let sao = a / 360;  // Assuming 1 sào = 360 m² (Note: the value can differ regionally)
+            let hecta = a / 10000; // 1 hectare = 10,000 m²
+            
+            document.getElementById("result1").textContent = sao.toFixed(2);
+            document.getElementById("result2").textContent = hecta.toFixed(2);
+        }
+    </script>
+</body>
+</html>
